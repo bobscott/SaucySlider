@@ -280,7 +280,7 @@ pre {
 
 /* line 243, style.scss */
 .field, .field-front {
-  width: 7000px;
+  width: 8000px;
   height: 254px;
   background: url(../images/field.png) bottom left;
   bottom: 180px;
@@ -296,12 +296,13 @@ pre {
 
 /* line 254, style.scss */
 .field-front {
+  width: 10000px;
   height: 158px;
   bottom: 140px;
   background: url(../images/field-front.png) bottom left;
 }
 
-/* line 261, style.scss */
+/* line 262, style.scss */
 .moutain {
   width: 6000px;
   height: 592px;
@@ -310,8 +311,12 @@ pre {
   left: -51%;
   z-index: 3;
 }
+/* line 269, style.scss */
+.moutain.fadeout {
+  opacity: 0.25;
+}
 @media (max-height: 780px) {
-  /* line 261, style.scss */
+  /* line 262, style.scss */
   .moutain {
     bottom: 300px;
   }
@@ -320,7 +325,7 @@ pre {
 /*
   Site Titles
 */
-/* line 276, style.scss */
+/* line 280, style.scss */
 .site-title {
   width: 100%;
   margin: 0;
@@ -336,24 +341,24 @@ pre {
   transition: font-size 1.5s;
 }
 @media (max-width: 1000px) {
-  /* line 276, style.scss */
+  /* line 280, style.scss */
   .site-title {
     font-size: 70px;
   }
 }
 @media (max-width: 550px) {
-  /* line 276, style.scss */
+  /* line 280, style.scss */
   .site-title {
     font-size: 40px;
   }
 }
-/* line 295, style.scss */
+/* line 299, style.scss */
 .small-title .site-title {
   text-shadow: none;
   font-size: 30px;
 }
 
-/* line 301, style.scss */
+/* line 305, style.scss */
 .site-sub-title {
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
@@ -365,24 +370,24 @@ pre {
   transition: top 1.5s;
 }
 @media (max-width: 1000px) {
-  /* line 301, style.scss */
+  /* line 305, style.scss */
   .site-sub-title {
     top: 120px;
   }
 }
 @media (max-width: 550px) {
-  /* line 301, style.scss */
+  /* line 305, style.scss */
   .site-sub-title {
     top: 100px;
   }
 }
-/* line 316, style.scss */
+/* line 320, style.scss */
 .small-title .site-sub-title {
   font-size: 14px;
   top: 85px;
 }
 
-/* line 322, style.scss */
+/* line 326, style.scss */
 .view-source {
   width: 100%;
   font-weight: bold;
@@ -391,7 +396,7 @@ pre {
   left: 0;
   z-index: 310;
 }
-/* line 329, style.scss */
+/* line 333, style.scss */
 .view-source a {
   text-decoration: none;
   color: #444;
@@ -400,7 +405,7 @@ pre {
 /*
   Scene 0
 */
-/* line 338, style.scss */
+/* line 342, style.scss */
 .intro {
   width: 700px;
   height: 300px;
@@ -411,13 +416,13 @@ pre {
   margin: auto;
 }
 @media (max-width: 720px) {
-  /* line 338, style.scss */
+  /* line 342, style.scss */
   .intro {
     width: 90%;
     left: -45%;
   }
 }
-/* line 350, style.scss */
+/* line 354, style.scss */
 .intro .begin {
   text-decoration: underline;
   cursor: pointer;
@@ -426,7 +431,7 @@ pre {
 /*
   Scene 1
 */
-/* line 359, style.scss */
+/* line 363, style.scss */
 .scene-1-title {
   width: 800px;
   text-align: center;
@@ -435,13 +440,13 @@ pre {
   z-index: 400;
 }
 @media (max-height: 960px) {
-  /* line 359, style.scss */
+  /* line 363, style.scss */
   .scene-1-title {
     top: 100px;
   }
 }
 
-/* line 370, style.scss */
+/* line 374, style.scss */
 .getting-started {
   width: 700px;
   height: 500px;
@@ -450,26 +455,26 @@ pre {
   box-sizing: border-box;
 }
 @media (max-height: 1050px) {
-  /* line 370, style.scss */
+  /* line 374, style.scss */
   .getting-started {
     height: 400px;
   }
 }
 @media (max-height: 950px) {
-  /* line 370, style.scss */
+  /* line 374, style.scss */
   .getting-started {
     height: 300px;
   }
 }
 @media (max-width: 720px) {
-  /* line 370, style.scss */
+  /* line 374, style.scss */
   .getting-started {
     width: 400px;
     left: 2300px;
   }
 }
 @media (max-width: 500px) {
-  /* line 370, style.scss */
+  /* line 374, style.scss */
   .getting-started {
     width: 300px;
     left: 2350px;
@@ -479,7 +484,7 @@ pre {
 /*
   Scene 2
 */
-/* line 395, style.scss */
+/* line 399, style.scss */
 .scene-2-title {
   width: 800px;
   text-align: center;
@@ -488,13 +493,13 @@ pre {
   z-index: 400;
 }
 @media (max-height: 940px) {
-  /* line 395, style.scss */
+  /* line 399, style.scss */
   .scene-2-title {
     top: 100px;
   }
 }
 
-/* line 406, style.scss */
+/* line 410, style.scss */
 .tech-wrapper {
   position: absolute;
   width: 650px;
@@ -506,7 +511,7 @@ pre {
   z-index: 400;
 }
 
-/* line 417, style.scss */
+/* line 421, style.scss */
 .terminology {
   display: table;
   width: 300px;
@@ -515,34 +520,34 @@ pre {
   float: left;
   margin: 12px;
 }
-/* line 424, style.scss */
+/* line 428, style.scss */
 .terminology dl {
   width: 100%;
   margin: 0;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 429, style.scss */
+/* line 433, style.scss */
 .terminology dl dt {
   font-weight: bold;
   float: left;
   font-size: 22px;
   margin-bottom: 8px;
 }
-/* line 435, style.scss */
+/* line 439, style.scss */
 .terminology dl dd {
   margin: 0;
   float: left;
 }
 
-/* line 442, style.scss */
+/* line 446, style.scss */
 .show-pieces *[data-scene] {
   outline: 5px solid #111;
   box-shadow: inset 0 0 100px #FFDB1D;
   transition: outline 0.5s, box-shadow 0.5s;
 }
 
-/* line 448, style.scss */
+/* line 452, style.scss */
 .terminology-example-stage {
   width: 100%;
   height: 100%;
@@ -551,7 +556,7 @@ pre {
   z-index: 300;
   transition: box-shadow 0.5s;
 }
-/* line 455, style.scss */
+/* line 459, style.scss */
 .terminology-example-stage.show {
   box-shadow: inset 0 0 300px #FFDB1D;
   border: 5px solid #111;
@@ -560,7 +565,7 @@ pre {
   box-sizing: border-box;
 }
 
-/* line 464, style.scss */
+/* line 468, style.scss */
 .terminology-example-scene {
   visibility: hidden;
   width: 0;
@@ -573,7 +578,7 @@ pre {
   opacity: 0;
   transition: opacity 0.5s;
 }
-/* line 475, style.scss */
+/* line 479, style.scss */
 .terminology-example-scene.show {
   box-shadow: 0 0 30px #FFDB1D;
   visibility: visible;
@@ -583,7 +588,7 @@ pre {
 /*
   Scene 3
 */
-/* line 485, style.scss */
+/* line 489, style.scss */
 .scene-3-title {
   width: 1200px;
   text-align: center;
@@ -592,13 +597,13 @@ pre {
   z-index: 200;
 }
 @media (max-height: 940px) {
-  /* line 485, style.scss */
+  /* line 489, style.scss */
   .scene-3-title {
     top: 100px;
   }
 }
 
-/* line 496, style.scss */
+/* line 500, style.scss */
 .background-images {
   width: 600px;
   left: 7200px;
@@ -606,7 +611,7 @@ pre {
   text-align: center;
 }
 
-/* line 503, style.scss */
+/* line 507, style.scss */
 .bg-example-1 {
   width: 200px;
   height: 200px;
@@ -620,7 +625,7 @@ pre {
   z-index: 100;
 }
 
-/* line 515, style.scss */
+/* line 519, style.scss */
 .bg-example-2 {
   width: 200px;
   height: 200px;
@@ -634,7 +639,7 @@ pre {
   z-index: 100;
 }
 
-/* line 527, style.scss */
+/* line 531, style.scss */
 .bg-example-3 {
   width: 200px;
   height: 200px;
@@ -651,7 +656,7 @@ pre {
 /*
   Scene 4
 */
-/* line 543, style.scss */
+/* line 547, style.scss */
 .scene-4-title {
   width: 1200px;
   text-align: center;
@@ -661,17 +666,17 @@ pre {
   opacity: 0;
 }
 @media (max-height: 940px) {
-  /* line 543, style.scss */
+  /* line 547, style.scss */
   .scene-4-title {
     top: 100px;
   }
 }
-/* line 553, style.scss */
+/* line 557, style.scss */
 .scene-4-title.on {
   opacity: 1;
 }
 
-/* line 557, style.scss */
+/* line 561, style.scss */
 .nested-example {
   width: 700px;
   left: 10150px;
@@ -679,13 +684,13 @@ pre {
   overflow: hidden;
 }
 
-/* line 563, style.scss */
+/* line 567, style.scss */
 .nested {
-  width: 520px;
+  width: 560px;
   padding: 20px;
   background-color: #3978E7;
 }
-/* line 567, style.scss */
+/* line 571, style.scss */
 .nested p {
   text-align: center;
 }
@@ -693,21 +698,72 @@ pre {
 /*
   Scene 5
 */
-/* line 575, style.scss */
-.download-today {
-  display: block;
-  width: 400px;
-  padding: 30px 50px;
-  background-color: #FC3131;
-  left: 14250px;
-  bottom: 50%;
-  z-index: 300;
-  font-size: 40px;
+/* line 579, style.scss */
+.scene-5-title {
+  width: 1200px;
   text-align: center;
-  text-decoration: none;
-  overflow: hidden;
+  left: 13900px;
+  top: 200px;
+  z-index: 200;
 }
-/* line 587, style.scss */
-.download-today:hover {
-  background-color: #FF704C;
+@media (max-height: 940px) {
+  /* line 579, style.scss */
+  .scene-5-title {
+    top: 100px;
+  }
+}
+
+/* line 590, style.scss */
+.download-github {
+  width: 400px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: 500;
+  left: 14300px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* line 603, style.scss */
+.btn {
+  width: 10em;
+  height: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: 300;
+  text-align: center;
+  padding: .75rem 1.5rem;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  background-color: #3072b3;
+  /* Old browsers */
+  background-repeat: repeat-x;
+  /* Repeat the gradient */
+  background-image: linear-gradient(top, #599bdc 0%, #3072b3 100%);
+  /* FF3.6+ */
+  border: 1px solid #2967a4;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* line 625, style.scss */
+.btn:hover {
+  background-image: linear-gradient(top, #599bdc 0%, #3072b3 75%);
+  /* FF3.6+ */
+}
+
+/* line 628, style.scss */
+.btn:active {
+  background-image: none;
+  background-color: #3072b3;
+  /* Old browsers */
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.125), 0 1px 2px rgba(0, 0, 0, 0.2);
 }

@@ -241,7 +241,7 @@ pre {
 }
 
 .field {
-  width: 7000px;
+  width: 8000px;
   height: 254px; 
   background: url(../images/field.png) bottom left;
   bottom: 180px;
@@ -252,6 +252,7 @@ pre {
   }
 }
 .field-front {
+  width: 10000px;
   @extend .field;
   height: 158px;
   bottom: 140px;
@@ -265,6 +266,9 @@ pre {
   bottom: 300px;
   left: -51%;
   z-index: 3;
+  &.fadeout {
+    opacity: 0.25;
+  }
   @media (max-height: 780px) {
     bottom: 300px;
   }
@@ -561,7 +565,7 @@ pre {
   overflow: hidden;
 }
 .nested {
-  width: 520px;
+  width: 560px;
   padding: 20px;
   background-color: #3978E7;
   p {
@@ -572,19 +576,57 @@ pre {
 /*
   Scene 5
 */
-.download-today {
-  display: block;
-  width: 400px;
-  padding: 30px 50px;
-  background-color: #FC3131;
-  left: $scene5 - 250px;
-  bottom: 50%;
-  z-index: 300;
-  font-size: 40px;
+.scene-5-title {
+  width: 1200px;
   text-align: center;
-  text-decoration: none;
-  overflow: hidden;
-  &:hover {
-    background-color: #FF704C;
+  left: $scene5 - 600px;
+  top: 200px;
+  z-index: 200;
+  @media (max-height: 940px) {
+    top: 100px;
   }
+}
+
+.download-github {
+  width: 400px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: 500;
+  left: $scene5 - 200px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.btn {
+  width: 10em;
+  height: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: 300;
+  text-align: center;
+  padding: .75rem 1.5rem;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  background-color: #3072b3; /* Old browsers */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  background-image: linear-gradient(top, #599bdc 0%, #3072b3 100%); /* FF3.6+ */
+  border: 1px solid #2967a4;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 2px rgba(0,0,0,.2);
+}
+.btn:hover {
+ background-image: linear-gradient(top, #599bdc 0%, #3072b3 75%); /* FF3.6+ */
+}
+.btn:active {
+  background-image: none;
+  background-color: #3072b3; /* Old browsers */
+  box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
 }

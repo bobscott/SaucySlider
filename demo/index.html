@@ -13,7 +13,7 @@
   <div class="object grass" data-scene="0" data-layer="1"></div>
   <div class="object field" data-scene="0" data-layer="-1.25"></div>
   <div class="object field-front" data-scene="0" data-layer="-1.75"></div>
-  <div class="object moutain" data-scene="0" data-layer="-1.1"></div>
+  <div class="object moutain" data-scene="0" data-layer="-1.1" data-transition="opacity 2s"></div>
 
   <!-- Titles -->
   <h1 class="object site-title">SaucySlider</h1>
@@ -136,7 +136,10 @@
   </div>
 
   <!-- Scene 5 -->
-  <a href="" class="object download-today" data-scene="5" data-layer="0" data-transition="background-color 0.5s">Download on GitHub</a>
+  <h1 class="object title scene-5-title" data-scene="5" data-layer="0">Download</h1>
+  <div class="object download-github" data-scene="5" data-layer="1">
+    <a href="https://github.com/bobscott/SaucySlider" target="_blank" class="object btn" data-inner data-scene="5" data-layer="2" data-transition="background-color 0.5s">Download on GitHub</a>
+  </div>
 
 </div>
 
@@ -204,7 +207,10 @@ function sceneMovedCallback(object) {
   if (pastScene  != -1) {
     if (newScene != 0 && newScene != 5) {
       smallTitle(true);
+    } else if (newScene  == 5) {
+      $('.moutain').addClass('fadeout');
     } else {
+      $('.moutain').removeClass('fadeout');
       smallTitle(false);
     }
   }
@@ -214,7 +220,7 @@ function sceneMovedCallback(object) {
 function sceneStoppedCallback(object) {
   var currentScene = object.currentScene;
 
-  if (currentScene != 0 && currentScene != 5) {
+  if (currentScene != 0) {
     smallTitle(true);
   }
   if (currentScene == 4) {
