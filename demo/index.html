@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SaucySlider DEMO</title>
+  <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/prefixed-style.css">
+</head>
+<body>
+
+<div id="stage">
+  <!-- Backgrounds -->
+  <div class="object dirt" data-scene="0" data-layer="1"></div>
+  <div class="object grass" data-scene="0" data-layer="1"></div>
+  <div class="object field" data-scene="0" data-layer="-1.25"></div>
+  <div class="object field-front" data-scene="0" data-layer="-1.75"></div>
+  <div class="object moutain" data-scene="0" data-layer="-1.1"></div>
+
+  <!-- Titles -->
+  <h1 class="object site-title">SaucySlider</h1>
+  <h2 class="object site-sub-title">Demo</h2>
+
+  <!-- Scene 0 -->  
+  <div class="object intro text-area" data-scene="0" data-layer="0">
+    <p>This is a demo of SaucySlider: a jQuery plugin for adding horizontal parallaxing effects to webpages.</p>
+    <p>You can download the project and read the documentation from <a href="https://github.com/bobscott/SaucySlider">github</a>.</p>
+    <p>To <span class="begin">begin</span> click the right arrow or use the navigation at the bottom.</p>
+  </div>
+
+  <!-- Scene 1 -->
+  <h1 class="object title scene-1-title" data-scene="1" data-layer="3">Getting Started</h1>
+  <div class="object getting-started text-area" data-scene="1" data-layer="0">
+    <p>Step 1: Step up your stage</p>
+    <code>
+      <pre>&lt;div id="stage"&gt;
+  &lt;-- First Scene -- &gt;
+  &lt;div data-scene="0" data-layer="1"&gt;&lt;/div&gt;
+
+  &lt;-- Second Scene -- &gt;
+  &lt;div data-scene="1" data-layer="2"&gt;&lt;/div&gt;
+
+  &lt;-- Third Scene -- &gt;
+  &lt;img src="img/photo.png" data-scene="2" data-layer="0"&gt;
+&lt;/div&gt;</pre>
+    </code>
+    <br>
+    <p>Step 2: Add nav buttons and/or pagers</p>
+    <code>
+      <pre>&lt;-- Nav Buttons -- &gt;
+&lt;button class="next"&gt;Foward&lt;/button&gt;
+&lt;button class="prev"&gt;Back&lt;/button&gt;
+
+&lt;-- Pagers -- &gt;
+&lt;ul class="pagers"&gt;
+  &lt;li&gt;Scene One&lt;/li&gt;
+  &lt;li&gt;Scene Two&lt;/li&gt;
+  &lt;li&gt;Scene Three&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </code>
+    <br>
+    <p>Step 3: Add your JavaScript</p>
+    <code>
+      <pre>$('#stage').saucySlider({
+  pager: $('.pagers li'),
+  nextButton: $('.next'),
+  prevButton: $('.prev'),
+  scenePoints: [0, 2500, 8000],
+  sceneTimes: [3000, 3000, 6000],
+  sceneNames: ['First', 'Second', 'Third']
+});</pre>
+    </code>
+  </div>
+
+  <!-- Scene 2 -->
+  <h1 class="object title scene-2-title" data-scene="2" data-layer="3">Terminology</h1>
+  <div class="tech-wrapper" data-scene="2" data-layer="0">
+    <div class="terminology t1 text-area">
+      <dl>
+        <dt>Stage</dt>
+        <dd>The root element that wraps all the pieces.</dd>
+      </dl>
+    </div>
+    <div class="terminology t2 text-area">
+      <dl>
+        <dt>Piece</dt>
+        <dd>Any element inside the stage that is apart of the parallax animation.</dd>
+      </dl>
+    </div>
+    <div class="terminology t3 text-area">
+      <dl>
+        <dt>Scene</dt>
+        <dd>A user defined point on the stage where pieces are centered around.</dd>
+      </dl>
+    </div>
+    <div class="terminology t4 text-area">
+      <dl>
+        <dt>Layer</dt>
+        <dd>A piece's layer value affects its parallax speed.<code><pre>&lt;div data-layer="0"&gt;</pre></code></dd>
+      </dl>
+    </div>
+  </div>
+  <div class="object terminology-example-stage" data-scene="2" data-layer="0"></div>
+  <div class="object terminology-example-scene" data-scene="2" data-layer="0"></div>
+
+  <!-- Scene 3 -->
+  <h1 class="object title scene-3-title" data-scene="3" data-layer="3">Background Position</h1>
+  <div class="object background-images text-area" data-scene="1" data-layer="0">
+    <p>Background positions can be set to parallax.</p>
+    <code>
+        <pre>&lt;div data-bg-x="1" data-bg-y="1"&gt;</pre>
+    </code>
+  </div>
+  <div class="object bg-example-1" data-scene="3" data-layer="0" data-bg-x="1">
+    <p>Change X</p>
+  </div>
+  <div class="object bg-example-2" data-scene="3" data-layer="0" data-bg-y="-1">
+    <p>Change Y</p>
+  </div>
+  <div class="object bg-example-3" data-scene="3" data-layer="0" data-bg-x="-1" data-bg-y="1">
+    <p>Change X &amp; Y</p>
+  </div>
+
+  <!-- Scene 4 -->
+  <h1 class="object title scene-4-title" data-transition="opacity 1s" data-scene="4" data-layer="3">Nested Pieces</h1>
+  <div class="object nested-example text-area" data-scene="4" data-layer="-1.8">
+    <div class="nested" data-inner data-layer="2">
+      <p>Pieces can be nested inside one another and<br> move relative to their parents.</p>
+      <code>
+        <pre>&lt;div data-scene="4" data-layer="0"&gt;
+  &lt;div data-inner data-layer="2"&gt;
+    I am nested inside another piece!
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      </code>
+    </div>
+  </div>
+
+  <!-- Scene 5 -->
+  <a href="" class="object download-today" data-scene="5" data-layer="0" data-transition="background-color 0.5s">Download on GitHub</a>
+
+</div>
+
+<ul class="pager">
+  <li>Intro</li>
+  <li>Getting Started</li>
+  <li>Terminology</li>
+  <li>Background Position</li>
+  <li>Nested Pieces</li>
+  <li>Download</li>
+</ul>
+
+<button type="button" class="nav-button prev">&lt;</button>
+<button type="button" class="nav-button next">&gt;</button>
+
+<a href="https://github.com/bobscott/SaucySlider" target="_blank" class="link-back">What is this?</a>
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../saucySlider.js"></script>
+<script>
+
+// Hover state on the stage example
+$('.terminology.t1').hover(
+  function(){
+    $('.terminology-example-stage').addClass('show');
+  }, 
+  function(){
+    $('.terminology-example-stage').removeClass('show');
+  }
+);
+
+// Hover state on the piece example
+$('.terminology.t2').hover(function(){
+  $('body').addClass('show-pieces');
+},
+function(){
+  $('body').removeClass('show-pieces');
+});
+
+// Hover state on the scene example
+$('.terminology.t3').hover(
+  function(){
+    $('.terminology-example-scene').addClass('show');
+  }, 
+  function(){
+    $('.terminology-example-scene').removeClass('show');
+  }
+);
+
+// Makes the main title large or small
+function smallTitle(state) {
+  if (state) {
+    $('body').addClass('small-title');
+  } else {
+    $('body').removeClass('small-title');
+  }
+}
+
+// Scene started moving
+function sceneMovedCallback(object) {
+  var newScene = object.newScene,
+      pastScene = object.pastScene;
+
+  // pastScene will equal -1 on initializing
+  if (pastScene  != -1) {
+    if (newScene != 0 && newScene != 5) {
+      smallTitle(true);
+    } else {
+      smallTitle(false);
+    }
+  }
+}
+
+// Scene stopped moving
+function sceneStoppedCallback(object) {
+  var currentScene = object.currentScene;
+
+  if (currentScene != 0 && currentScene != 5) {
+    smallTitle(true);
+  }
+  if (currentScene == 4) {
+    $('.scene-4-title').addClass('on');
+  }
+}
+
+// Scene change was stopped prematurely
+function sceneCanceledCallback(object) {
+  console.log('canceled');
+console.log(object);
+}
+
+// SaucySlider
+$('#stage').saucySlider({
+  pager: $('.pager li'),
+  nextButton: $('.next, .begin'),
+  prevButton: $('.prev'),
+  scenePoints: [0, 2500, 6000, 7500, 10500, 14500],
+  sceneTimes: [3000,3000,4000,5000, 3000],
+  sceneNames: ['Intro', 'Getting+Started', 'Terminology', 'Background+Positions', 'Nested+Pieces', 'Download'],
+  sceneMoved: sceneMovedCallback,
+  sceneStopped: sceneStoppedCallback,
+  sceneCanceled: sceneCanceledCallback
+});
+</script>
+</body>
+</html>

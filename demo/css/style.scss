@@ -1,0 +1,590 @@
+$scene0: 0;
+$scene1: 2500px;
+$scene2: 6000px;
+$scene3: 7500px;
+$scene4: 10500px;
+$scene5: 14500px;
+
+$headline: 'Alfa Slab One', cursive;
+$sans-serif: 'Open Sans', sans-serif;
+
+html.window-resizing * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  background-color: #5986cf;
+  font-family: $sans-serif
+}
+
+a {
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-family: $headline;
+  font-weight: normal;
+}
+h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+pre {
+  margin-bottom: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #303E58;
+  overflow: auto;
+}
+
+.title {
+  font-size: 80px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,.5);
+  @media (max-width: 940px) {
+    font-size: 60px;
+  }
+  @media (max-width: 700px) {
+    font-size: 30px;
+    top: 120px !important;
+  }
+  @media (max-width: 360px) {
+    font-size: 18px;
+  }
+}
+
+.text-area {
+  height: auto;
+  padding: 50px;
+  background-color: rgba(0,0,0,0.85);
+  z-index: 90;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 5px;
+  p {
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: bold;
+  }
+}
+
+.link-back {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 4px solid #fff;
+  color: #fff;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  transition: background-color 0.2s;
+  @media (max-width: 460px) {
+    padding: 0;
+    border: none;
+    background-color: none;
+    right: 5px;
+    bottom: 5px;
+  }
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+#stage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.pager {
+  display: block;
+  padding: 0;
+  position: fixed;
+  z-index: 900;
+  left: 40px;
+  bottom: 40px;
+  margin: auto;
+  @media (max-width: 1120px) {
+    width: 500px;
+    bottom: 5px;
+  }
+  @media (max-width: 720px) {
+    width: 300px;
+    left: 5px;
+    bottom: 0;
+    font-size: 0.75em;
+  }
+  li {
+    display: inline-block;
+    width: auto;
+    padding: 15px 20px;
+    margin: 0 10px 10px 0;
+    float: left;
+    list-style: none;
+    text-align: center;
+    background-color: #546B94;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    @media (max-width: 720px) {
+      padding: 10px;
+    }
+    &:hover {
+      background-color: #5E7CB1;
+    }
+    &.on {
+      background-color: #303E58;
+    }
+  }
+}
+
+.nav-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.75);
+  color: rgba(0,0,0,0);
+  position: fixed;
+  border: none;
+  outline: none;
+  font-size: 26px;
+  font-weight: bold;
+  z-index: 901;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 1s;
+  &:hover {
+    background-color: rgba(255,255,255,.25);
+  }
+  &.off {
+    opacity: 0;
+    cursor: default;
+  }
+  &.prev {
+    left: 20px;
+    top: 0;
+    bottom: 30px;
+    margin: auto;
+  }
+  &.prev:after {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:13px solid rgba(0,0,0,.75); 
+    left: 0;
+    right: 4px;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: auto;
+  }
+  &.next {
+    right: 20px;
+    top: 0;
+    bottom: 30px;
+    margin: auto;
+  }
+  &.next:after {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-left :13px solid rgba(0,0,0,.75); 
+    left: 4px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: auto;
+  }
+}
+
+.object {
+    position: absolute;
+}
+
+/*
+  Backgrounds
+*/
+.dirt {
+  width: 31000px;
+  height: 150px;
+  background: url(../images/dirt.jpg) top left;
+  background-size: contain;
+  border-top: 2px solid rgb(68, 49, 34);
+  bottom: 0;
+  left: -51%;
+  z-index: 100;
+}
+
+.grass {
+  width: 31000px;
+  height: 80px;
+  background: url(../images/grass.png) top left;
+  bottom: 152px;
+  left: -51%;
+  z-index: 100;   
+}
+
+.field {
+  width: 7000px;
+  height: 254px; 
+  background: url(../images/field.png) bottom left;
+  bottom: 180px;
+  left: -51%;
+  z-index: 10;
+  @media (max-height: 780px) {
+    bottom: -50px;
+  }
+}
+.field-front {
+  @extend .field;
+  height: 158px;
+  bottom: 140px;
+  background: url(../images/field-front.png) bottom left;
+}
+
+.moutain {
+  width: 6000px;
+  height: 592px;
+  background: url(../images/moutains.jpg) bottom left;
+  bottom: 300px;
+  left: -51%;
+  z-index: 3;
+  @media (max-height: 780px) {
+    bottom: 300px;
+  }
+}
+
+/*
+  Site Titles
+*/
+.site-title {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 120px;
+  text-align: center;
+  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 20px;
+  z-index: 300;
+  transition: font-size 1.5s;
+  @media (max-width: 1000px) {
+    font-size: 70px;
+  }
+  @media (max-width: 550px) {
+    font-size: 40px;
+  }
+  .small-title & {
+    text-shadow: none;
+    font-size: 30px;
+  }
+}
+
+.site-sub-title {
+  width: 100%;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  text-transform: uppercase;
+  top: 190px;
+  left: 0;
+  z-index: 300;
+  transition: top 1.5s;
+  @media (max-width: 1000px) {
+    top: 120px;
+  }
+  @media (max-width: 550px) {
+    top: 100px;
+  }
+  .small-title & {
+    font-size: 14px;
+    top: 85px;
+  }
+}
+
+.view-source {
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  left: 0;
+  z-index: 310;
+  a {
+    text-decoration: none;
+    color: #444;
+  }
+}
+
+/*
+  Scene 0
+*/
+.intro {
+  width: 700px;
+  height: 300px;
+  position: absolute;
+  left: -350px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  @media (max-width: 720px) {
+    width: 90%;
+    left: -45%;
+  }
+  .begin {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+/*
+  Scene 1
+*/
+.scene-1-title {
+  width: 800px;
+  text-align: center;
+  left: $scene1 - 400px;
+  top: 200px;
+  z-index: 400;
+  @media (max-height: 960px) {
+    top: 100px;
+  } 
+}
+
+.getting-started {
+  width: 700px;
+  height: 500px;
+  left: $scene1 - 350px;
+  bottom: 250px;
+  box-sizing: border-box;
+  @media (max-height: 1050px) {
+    height: 400px;
+  }
+  @media (max-height: 950px) {
+    height: 300px;
+  }
+  @media (max-width: 720px) {
+    width: 400px;
+    left: $scene1 - 200px;
+  }
+  @media (max-width: 500px) {
+    width: 300px;
+    left: $scene1 - 150px;
+  }
+}
+
+/*
+  Scene 2
+*/
+.scene-2-title {
+  width: 800px;
+  text-align: center;
+  left: $scene2 - 400px;
+  top: 200px;
+  z-index: 400;
+  @media (max-height: 940px) {
+    top: 100px;
+  }
+}
+
+.tech-wrapper {
+  position: absolute;
+  width: 650px;
+  height: 445px;
+  left: $scene2 - 325px;
+  top: 0;
+  bottom: -60px;
+  margin: auto;
+  z-index: 400;
+}
+
+.terminology {
+  display: table;
+  width: 300px;
+  height: 200px;
+  padding: 10px 30px;
+  float: left;
+  margin: 12px;
+  dl {
+    width: 100%;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    dt {
+      font-weight: bold;
+      float: left;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    dd {
+      margin: 0;
+      float: left;
+    }
+  }
+}
+
+.show-pieces *[data-scene] {
+  outline: 5px solid #111;
+  box-shadow: inset 0 0 100px #FFDB1D;
+  transition: outline 0.5s, box-shadow 0.5s;
+}
+
+.terminology-example-stage {
+  width: 100%;
+  height: 100%;
+  left: $scene2;
+  margin-left: -50%;
+  z-index: 300;
+  transition: box-shadow 0.5s;
+  &.show {
+    box-shadow: inset 0 0 300px #FFDB1D;
+    border: 5px solid #111;
+    border-left: none;
+    border-right: none;
+    box-sizing: border-box;
+  }
+}
+
+.terminology-example-scene {
+  visibility: hidden;
+  width: 0;
+  height: 100%;
+  left: $scene2 - 3px;
+  top: 0;
+  background-color: #FFDB1D;
+  border-right: 5px dashed #111;
+  z-index: 500;
+  opacity: 0;
+  transition: opacity 0.5s;
+  &.show {
+    box-shadow: 0 0 30px #FFDB1D;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/*
+  Scene 3
+*/
+.scene-3-title {
+  width: 1200px;
+  text-align: center;
+  left: $scene3 - 600px;
+  top: 200px;
+  z-index: 200;
+  @media (max-height: 940px) {
+    top: 100px;
+  }
+}
+
+.background-images {
+  width: 600px;
+  left: $scene3 - 300px;
+  bottom: 230px;
+  text-align: center;
+}
+
+.bg-example-1 {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 750%;
+  font-size: 20px;
+  font-weight: bold;
+  background: url(../images/plaid.png);
+  left: $scene3 - 400px;
+  bottom: 450px;
+  z-index: 100;
+}
+.bg-example-2 {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 750%;
+  font-size: 20px;
+  font-weight: bold;
+  background: url(../images/plaid.png);
+  left: $scene3 - 100px;
+  bottom: 450px;
+  z-index: 100;
+}
+.bg-example-3 {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 750%;
+  font-size: 20px;
+  font-weight: bold;
+  background: url(../images/plaid.png);
+  left: $scene3 + 200px;
+  bottom: 450px;
+  z-index: 100;
+}
+
+/*
+  Scene 4
+*/
+.scene-4-title {
+  width: 1200px;
+  text-align: center;
+  left: $scene4 - 600px;
+  top: 200px;
+  z-index: 200;
+  opacity: 0;
+  @media (max-height: 940px) {
+    top: 100px;
+  }
+  &.on {
+    opacity: 1;
+  }
+}
+.nested-example {
+  width: 700px;
+  left: $scene4 - 350px;
+  bottom: 300px;
+  overflow: hidden;
+}
+.nested {
+  width: 520px;
+  padding: 20px;
+  background-color: #3978E7;
+  p {
+    text-align: center;
+  }
+}
+
+/*
+  Scene 5
+*/
+.download-today {
+  display: block;
+  width: 400px;
+  padding: 30px 50px;
+  background-color: #FC3131;
+  left: $scene5 - 250px;
+  bottom: 50%;
+  z-index: 300;
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  &:hover {
+    background-color: #FF704C;
+  }
+}
