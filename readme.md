@@ -44,7 +44,7 @@ The **"data-inner"** attribute can be added to an element to designate that it s
 </div>
 ```
 
-The **"data-transtion"** attribute allows you to add your own transtion values to elements without having to override SaucySlider's transtions.
+The **"data-transition"** attribute allows you to add your own transition values to elements without having to override SaucySlider's transitions.
 ```HTML
 <!-- Example 2 -->
 <div class="example-piece-2" data-scene="0" data-layer="1" data-transition="opacity 0.2s, background-color 300ms"></div>
